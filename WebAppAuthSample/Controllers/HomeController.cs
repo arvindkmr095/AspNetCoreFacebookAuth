@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAppAuthSample.Controllers
 {
+    
     [Authorize]
     public class HomeController : Controller
     {

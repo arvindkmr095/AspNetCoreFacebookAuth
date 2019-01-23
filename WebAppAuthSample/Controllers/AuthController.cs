@@ -56,7 +56,7 @@ namespace WebAppAuthSample.Controllers
             await HttpContext.SignOutAsync();
             _userService.IsUserLogin = false;
             _userService.UserName = string.Empty;
-            return RedirectToAction("Signout","Auth");
+            return RedirectToAction("SignIn","Auth");
         }
     }
 }
