@@ -31,7 +31,6 @@ namespace WebAppAuthSample
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
             app.UseAuthentication();
