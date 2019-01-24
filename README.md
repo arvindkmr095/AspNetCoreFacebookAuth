@@ -1,2 +1,2 @@
-# ASP.Net Core authentication and authorization
+# ASP.Net Core facebook authentication
 
