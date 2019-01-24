@@ -1,0 +1,69 @@
+﻿@inject IUserService _userService
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {
+            height: 700px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                @if (_userService.IsUserLogin == true)
+                {
+                    <h4>@_userService.UserName's Blog</h4>
+                }
+                <ul class="nav nav-pills nav-stacked">
+
+                    @if (_userService.IsUserLogin == true)
+                    {
+                        <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                        <li><a href="@Url.Action("SignOut","Auth")">Logout</a></li>
+                    }
+
+
+                    @if (_userService.IsUserLogin == false)
+                    {
+                        <li><a href="@Url.Action("SignIn","Auth")">Login</a></li>
+                    }
+
+                </ul><br>
+              
+            </div>
+
+            <div class="col-sm-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <p>ASP.Net Core Auth Sample</p>
+    </footer>
+
+</body>
+</html>

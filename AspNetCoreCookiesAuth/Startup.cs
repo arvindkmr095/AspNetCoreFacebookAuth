@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Collections.Generic;
+using AspNetCoreCookiesAuth.Services;
 
-namespace WebAppAuthSample
+namespace AspNetCoreCookiesAuth
 {
     public class Startup
     {
@@ -11,11 +13,20 @@ namespace WebAppAuthSample
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // Create In-Memory users for authentication
+            var user = new Dictionary<string, string>();
+            //user.Add("Arvind", "P@$$W0rd"); 
+            user.Add("Arvind", "password");
+            services.AddSingleton<IUserService>(new UserService(user));
+
             services.AddMvc();
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;                
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
             .AddCookie(options =>
             {
@@ -32,7 +43,7 @@ namespace WebAppAuthSample
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes => routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}"));
             app.UseAuthentication();
 
         }
