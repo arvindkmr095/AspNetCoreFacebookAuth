@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using WebAppAuthSample.Models;
-using WebAppAuthSample.Services;
+using AspNetCoreCookiesAuth.Models;
+using AspNetCoreCookiesAuth.Services;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace WebAppAuthSample.Controllers
+namespace AspNetCoreCookiesAuth.Controllers
 {
     [Route("auth")]
     public class AuthController : Controller

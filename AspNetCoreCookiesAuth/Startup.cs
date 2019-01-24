@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Collections.Generic;
-using WebAppAuthSample.Services;
+using AspNetCoreCookiesAuth.Services;
 
-namespace WebAppAuthSample
+namespace AspNetCoreCookiesAuth
 {
     public class Startup
     {

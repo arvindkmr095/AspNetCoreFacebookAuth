@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebAppAuthSample.Models;
+using AspNetCoreCookiesAuth.Models;
 
-namespace WebAppAuthSample.Services
+namespace AspNetCoreCookiesAuth.Services
 {
     public class UserService : IUserService
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebAppAuthSample.Models
+namespace AspNetCoreCookiesAuth.Models
 {
     public class UserModel
     {
