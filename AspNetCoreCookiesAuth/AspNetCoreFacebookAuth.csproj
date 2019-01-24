@@ -3,10 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <Authors>AspNetCoreCookiesAuth</Authors>
+    <Authors>AspNetCoreFacebookAuth</Authors>
     <Product>AspNetCoreCookiesAuth</Product>
-    <AssemblyName>AspNetCoreCookiesAuth</AssemblyName>
+    <AssemblyName>AspNetCoreFacebookAuth</AssemblyName>
     <RootNamespace>AspNetCoreCookiesAuth</RootNamespace>
+    <Company>AspNetCoreFacebookAuth</Company>
   </PropertyGroup>
 
   <ItemGroup>

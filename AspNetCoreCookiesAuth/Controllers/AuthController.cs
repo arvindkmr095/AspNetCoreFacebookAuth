@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNetCoreCookiesAuth.Models;
-using AspNetCoreCookiesAuth.Services;
+using AspNetCoreFacebookAuth.Models;
+using AspNetCoreFacebookAuth.Services;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AspNetCoreCookiesAuth.Controllers
+namespace AspNetCoreFacebookAuth.Controllers
 {
     [Route("auth")]
     public class AuthController : Controller

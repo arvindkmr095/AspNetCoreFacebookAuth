@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AspNetCoreCookiesAuth.Models
+namespace AspNetCoreFacebookAuth.Models
 {
     public class UserModel
     {

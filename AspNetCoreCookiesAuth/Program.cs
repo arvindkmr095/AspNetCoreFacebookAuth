@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace AspNetCoreCookiesAuth
+namespace AspNetCoreFacebookAuth
 {
     public class Program
     {

@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Collections.Generic;
-using AspNetCoreCookiesAuth.Services;
+using AspNetCoreFacebookAuth.Services;
 
-namespace AspNetCoreCookiesAuth
+namespace AspNetCoreFacebookAuth
 {
     public class Startup
     {

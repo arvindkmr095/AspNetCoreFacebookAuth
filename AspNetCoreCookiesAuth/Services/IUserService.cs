@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreCookiesAuth.Models;
+using AspNetCoreFacebookAuth.Models;
 
-namespace AspNetCoreCookiesAuth.Services
+namespace AspNetCoreFacebookAuth.Services
 {
     public interface IUserService
     {
